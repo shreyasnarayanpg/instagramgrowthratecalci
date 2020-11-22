@@ -1,0 +1,35 @@
+//Shreyas Narayan P G
+import java.util.Scanner;
+public class IGGC {
+	public static void main(String[] args) {
+		//a=no of followers currently
+		//b=no of unfollowers
+		//c=no of posts you make per month
+		//r=rate of growth
+		//t=time
+		//r=((a^1/t-b)*c)*100
+		 System.out.println("Please enter your Instagram Username:");
+	           Scanner in = new Scanner(System.in);
+	           String Nme=in.next();
+	        
+		System.out.println("Now enter the Time interval in days:");
+		Scanner scan= new Scanner(System.in);
+		float t= scan.nextFloat();
+		
+		System.out.println("Enter the number of followers at present:");
+		Scanner scan1= new Scanner(System.in);
+		float a= scan1.nextFloat();
+		
+		System.out.println("We request you to enter the number of users who have unfollowed you:");
+		Scanner scan2= new Scanner(System.in);
+		float b= scan2.nextFloat();
+		
+		System.out.println("Enter the number of posts you have made in a month:");
+		Scanner scan3= new Scanner(System.in);
+		int c= scan3.nextInt();
+
+		System.out.println("Hey "+ Nme + "!!.Your growth rate is: "+calculateGR(t,a,b,c));
+		System.out.println("Thank You.Have a Nice Day.");
+	}
+	public static double calculateGR(float t,float a,float b,int c)
+	{
